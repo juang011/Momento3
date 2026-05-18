@@ -13,7 +13,7 @@ public class EstudianteService {
 
         estudiantes = new HashMap<>();
     }
-
+       // Método para registrar estudiantes
     public void registrarEstudiante(Estudiante estudiante) {
 
         estudiantes.put(estudiante.getId(), estudiante);

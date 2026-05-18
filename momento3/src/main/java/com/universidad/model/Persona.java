@@ -1,5 +1,5 @@
 package com.universidad.model;
-
+// Clase abstracta que representa una persona
 public abstract class Persona {
 
     protected String nombre;
