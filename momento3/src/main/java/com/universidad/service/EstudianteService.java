@@ -1,4 +1,5 @@
 package com.universidad.service;
+import com.universidad.excepciones.EstudianteNoEncontradoException;
 
 import java.util.HashMap;
 
@@ -29,4 +30,16 @@ public class EstudianteService {
             System.out.println("----------------");
         }
     }
+
+    public Estudiante buscarEstudiante(String id)
+        throws EstudianteNoEncontradoException {
+
+    if (!estudiantes.containsKey(id)) {
+
+        throw new EstudianteNoEncontradoException(
+                "Estudiante no encontrado");
+    }
+
+    return estudiantes.get(id);
+}
 }
